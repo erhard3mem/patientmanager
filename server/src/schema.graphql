@@ -1,0 +1,82 @@
+
+// schema graphql is for hospital
+
+type Query {
+  allPatients: [Patient!]  
+  allMedications: [Medication!]
+  allDiagnoses: [Diagnosis!]
+  allInsurances: [Insurance!]  // login-account abhängig
+  searchDiagnoses(name: String!): [Diagnosis!]
+}
+
+type Mutation {
+  newPatient(fName: String!, lName: String!, bDate: String!, sex: String!, insuranceId: ID!): Patient
+  newDiagnosis(name: String!): Diagnosis
+  newMedication(name: String!): Medication
+  newInsurance(name: String!): Insurance
+  newRecord(patientId: ID!, diagnosisId: ID!, date: String!, details: String!, discharged: Boolean!): Record
+  discharge(recordId: ID!, discharged: Boolean!): Record
+  newPrescription(patientId: ID!, medicationId: ID!, diagnosisId: ID!, dosis: String!): Prescription
+  signup(email: String!, password: String!, name: String!): AuthPayload
+  login(email: String!, password: String!): AuthPayload
+}
+
+type AuthPayload {
+  token: String
+  user: User
+}
+
+type User {
+  id: ID!
+  name: String! // is account name e.g. for choosing secretary or what is account name?
+  email: String!
+}
+
+type Patient {
+  id: ID!
+  fName: String!
+  lName: String!
+  bDate: String!
+  sex: String!
+  records: [Record!]
+  prescriptions: [Prescription!]
+  insurance: Insurance
+}
+
+type Diagnosis {
+  id: ID!
+  name: String!
+}
+
+type Medication {
+ id: ID!
+ name: String!
+ medicationcompany: ID!
+}
+
+type MedicationCompany {
+ id: ID!
+ name: String!
+}
+
+type Prescription {
+   id: ID!
+ patient: Patient
+ medication: Medication
+ diagnosis: Diagnosis
+ dosis: String!
+}
+
+type Record {
+   id: ID!
+   patient: Patient
+   diagnosis: Diagnosis
+ date: String!
+ details: String!
+ discharged: Boolean!
+}
+
+type Insurance {
+   id: ID!
+   name: String!
+}

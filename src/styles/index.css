@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+input {
+  max-width: 500px;
+}
+
+.gray {
+  color: #828282;
+}
+
+.orange {
+  background-color: #ff6600;
+}
+
+.background-gray {
+  background-color: rgb(246, 246, 239);
+}
+
+.f11 {
+  font-size: 11px;
+}
+
+.w85 {
+  width: 85%;
+}
+
+.button {
+  font-family: monospace;
+  font-size: 10pt;
+  color: black;
+  background-color: buttonface;
+  text-align: center;
+  padding: 2px 6px 3px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  cursor: pointer;
+  max-width: 250px;
+}
+
+.records {
+  padding: 20px;
+  border: solid 0px black;  
+  background: linear-gradient(to bottom right, #add8e6 0%, #ffffff 100%);
+  border-radius: 40px;
+  margin: 20px;
+  width:48%;
+}
+.prescriptions {
+  padding:20px;
+  margin-top:-1px;
+  border: solid 0px black;
+  background:linear-gradient(to bottom right, violet 0%, #ffffff 100%);
+  border-radius: 40px;
+  margin: 20px;
+  width:48%;
+}
+.patientDetails {
+  padding:30px;
+  padding-top:0px;
+  background-color:white;  
+  position: relative;
+  overflow: hidden;
+}
+.padding30px {
+  padding:30px;
+}
+.patientList {
+  cursor:pointer;
+}
+.maxWidth500Px {
+  max-width: 500px;
+  width:500px;
+}
+.bordered { border: 1px solid black; padding: 2px; margin:3px; }
+.height25px { margin-top:5px; height: 25px; } 
+.links a {
+  padding: 5px; 
+  margin: 2px;
+  margin-right:10px;
+  border-radius:20px;
+  font-weight:bold;
+  vertical-align: middle;
+  text-align: center;
+  height:20px;
+  margin-top:15px;
+}
+.links a:hover {
+  background-color:lightgrey;
+}
+.headtitle {
+  font-size:30px;
+  margin:50px;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-right:70px !important;
+}
+.headtitle a{
+  text-decoration: none;
+  color:black;
+}
+.closeBtn {
+  position: absolute;
+  left:0;
+  top:0;
+}
+.log {
+  position:absolute;
+  bottom:0;
+  height:200px;
+  overflow:scroll;
+  width:300px;
+  right:30px;
+  border:2px solid black;
+  background-color:lightgreen;
+}
+.info {
+  background-color:lightgreen;
+  padding:10px;
+  border:1px solid green;  
+  width:400px;
+  margin:10px;
+}
+.lb { background-color:lightblue; }
+.lc { background-color:violet; }
+.purple { color:purple }
+.darkred { color:darkred; }
+.darkgreen { color:darkgreen; }
+.blue { color:blue; }
+.anonymPatientsTable td { border:1px solid black; }
+li:hover { text-decoration: underline; }
+.hospitalIcon {
+  content: ' ';
+  background-image: url("./hospital-icon.png");
+  background-size: 30px 30px;
+  background-repeat:no-repeat;
+  margin:10px;
+  padding-left:40px;
+  display:inline;
+}
+.lightgreen { background-color: lightgreen; }
+.minHeight500Px { min-height: 500px; }
+.n { text-decoration: none; }
+.n:hover {text-decoration:none;}
+.lt:hover {text-decoration: line-through;}
+.lt { text-decoration: line-through; }
+.white { background-color: white; }
+.borderBottom2Px { border-bottom: 2px solid gray; }
+.loginBtn { margin-top:20px; margin-right:20px; }
+.frontimage { 
+  height:1500px; 
+  background-image: url("./frontimage.jpg");   
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}

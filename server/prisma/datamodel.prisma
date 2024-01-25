@@ -1,0 +1,49 @@
+type User {
+  id: ID! @id
+  name: String!
+  email: String! @unique
+  password: String!
+}
+
+type Patient {
+  id: ID! @id
+  fName: String!
+  lName: String!
+  bDate: String!
+  sex: String!
+  insurance: Insurance
+  records: [Record!]
+  prescriptions: [Prescription!]
+}
+
+type Diagnosis {
+  id: ID! @id
+  name: String!
+}
+
+type Medication {
+ id: ID! @id
+ name: String!
+}
+
+type Insurance {
+ id: ID! @id
+ name: String!
+}
+
+type Prescription {
+  id: ID! @id
+ patient: Patient
+ medication: Medication
+ diagnosis: Diagnosis
+ dosis: String!
+}
+
+type Record {
+  id: ID! @id
+ patient: Patient
+ diagnosis: Diagnosis
+ date: String!
+ details: String!
+ discharged: Boolean!
+}
